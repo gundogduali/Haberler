@@ -1,9 +1,8 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 
-import 'package:news_app/data/core/api_client.dart';
-import 'package:news_app/data/core/api_paths.dart';
-import 'package:news_app/data/models/article_model.dart';
-import 'package:news_app/data/models/news_result_model.dart';
+import '../core/api_client.dart';
+import '../core/api_paths.dart';
+import '../models/article_model.dart';
+import '../models/news_result_model.dart';
 
 abstract class INewsRemoteDataSource {
   Future<List<ArticleModel>?> getTopHeadlines();
