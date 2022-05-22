@@ -2,12 +2,17 @@ import '../../domain/entities/article_entity.dart';
 
 class ArticleModel extends ArticleEntity {
   final Source? source;
+  @override
   final String? author;
+  @override
   final String title;
   final String? description;
   final String? url;
+  @override
   final String? urlToImage;
+  @override
   final String? publishedAt;
+  @override
   final String? content;
 
   const ArticleModel(
@@ -18,13 +23,13 @@ class ArticleModel extends ArticleEntity {
       this.url,
       this.urlToImage,
       this.publishedAt,
-      this.content}):super(
-        author: author,
-        title:title,
-        urlToImage: urlToImage,
-        publishedAt: publishedAt,
-        content: content
-      );
+      this.content})
+      : super(
+            author: author,
+            title: title,
+            urlToImage: urlToImage,
+            publishedAt: publishedAt,
+            content: content);
 
   factory ArticleModel.fromJson(Map<String, dynamic> json) {
     return ArticleModel(

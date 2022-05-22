@@ -6,6 +6,7 @@ import '../data/data_sources/news_remote_data_source.dart';
 import '../data/repositories/news_repository_impl.dart';
 import '../domain/repositories/news_repository.dart';
 import '../domain/usecases/get_top_headlines.dart';
+import '../presentation/blocs/article_list/article_list_cubit.dart';
 
 final getItInstance = GetIt.I;
 
@@ -30,4 +31,6 @@ Future<void> init() async {
   sl.registerLazySingleton<GetTopHeadlines>(() => GetTopHeadlines(sl()));
 
   //* Blocs
+  sl.registerFactory<ArticleListCubit>(
+      () => ArticleListCubit(getTopHeadlines: sl()));
 }

@@ -30,18 +30,7 @@ class _RootScreenState extends State<RootScreen> {
           showSelectedLabels: false,
           showUnselectedLabels: false,
           items: BnvItems().items,
-          onTap: (index) {
-            if (index == 0) {
-              BlocProvider.of<NavigationCubit>(context)
-                  .getNavBarItem(NavbarItem.home);
-            } else if (index == 1) {
-              BlocProvider.of<NavigationCubit>(context)
-                  .getNavBarItem(NavbarItem.genres);
-            } else if (index == 2) {
-              BlocProvider.of<NavigationCubit>(context)
-                  .getNavBarItem(NavbarItem.profile);
-            }
-          },
+          onTap: _onTap,
         );
       },
     );
@@ -62,5 +51,17 @@ class _RootScreenState extends State<RootScreen> {
         return Container();
       },
     );
+  }
+
+  void _onTap(int index) {
+    if (index == 0) {
+      BlocProvider.of<NavigationCubit>(context).getNavBarItem(NavbarItem.home);
+    } else if (index == 1) {
+      BlocProvider.of<NavigationCubit>(context)
+          .getNavBarItem(NavbarItem.genres);
+    } else if (index == 2) {
+      BlocProvider.of<NavigationCubit>(context)
+          .getNavBarItem(NavbarItem.profile);
+    }
   }
 }
