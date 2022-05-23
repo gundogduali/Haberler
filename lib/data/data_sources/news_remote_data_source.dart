@@ -1,4 +1,3 @@
-
 import '../core/api_client.dart';
 import '../core/api_paths.dart';
 import '../models/article_model.dart';
@@ -19,7 +18,6 @@ class NewsRemoteDataSource extends INewsRemoteDataSource {
   Future<List<ArticleModel>?> getTopHeadlines() async {
     final response = await _client.get(ApiPaths.getTopHeadlines.str());
     final articles = NewsResultModel.fromJson(response).articles;
-    print(articles);
     return articles;
   }
 
@@ -29,7 +27,7 @@ class NewsRemoteDataSource extends INewsRemoteDataSource {
       category: category,
     ));
     final articles = NewsResultModel.fromJson(response).articles;
-    print(articles);
+    
     return articles;
   }
 }

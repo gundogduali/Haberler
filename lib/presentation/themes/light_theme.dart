@@ -16,6 +16,8 @@ class LightTheme {
         elevation: 0,
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         elevation: 0,
       ),
       

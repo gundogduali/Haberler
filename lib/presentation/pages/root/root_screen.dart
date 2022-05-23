@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/presentation/pages/categories/categories_screen.dart';
 
 import '../../blocs/bottom_navigation/navigation_cubit.dart';
 import '../home/home_screen.dart';
@@ -27,8 +28,6 @@ class _RootScreenState extends State<RootScreen> {
       builder: (context, state) {
         return BottomNavigationBar(
           currentIndex: state.index,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
           items: BnvItems().items,
           onTap: _onTap,
         );
@@ -42,9 +41,7 @@ class _RootScreenState extends State<RootScreen> {
         if (state.navbarItem == NavbarItem.home) {
           return const HomeScreen();
         } else if (state.navbarItem == NavbarItem.genres) {
-          return Center(
-            child: Text(state.navbarItem.name),
-          );
+          return const CategoriesScreen();
         } else if (state.navbarItem == NavbarItem.profile) {
           return const SizedBox.shrink();
         }

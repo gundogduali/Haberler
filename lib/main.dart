@@ -13,5 +13,5 @@ void main() {
       SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]));
   unawaited(getIt.init());
 
-  runApp(const NewsApp());
+  runApp(NewsApp());
 }
