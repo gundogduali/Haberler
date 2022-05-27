@@ -1,0 +1,16 @@
+{
+    "categories": "Category",
+    "tech" : "Tech",
+    "business": "Business",
+    "health" : "Health",
+    "entertainment" : "Entertainment",
+    "general" : "General",
+    "science" : "Science",
+    "sport" : "Sport",
+    "search" : "Search",
+    "nightMode" : "Night Mode",
+    "language" : "Language",
+    "logout" : "Logout",
+    "bookmark" : "Bookmarks"
+    
+}

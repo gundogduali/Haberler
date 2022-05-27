@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/presentation/pages/categories/categories_screen.dart';
 
 import '../../blocs/bottom_navigation/navigation_cubit.dart';
+import '../categories/categories_screen.dart';
 import '../home/home_screen.dart';
+import '../profile/profile_screen.dart';
 import 'bnv_items.dart';
 import 'navbar_item.dart';
 
@@ -15,6 +16,11 @@ class RootScreen extends StatefulWidget {
 }
 
 class _RootScreenState extends State<RootScreen> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +49,7 @@ class _RootScreenState extends State<RootScreen> {
         } else if (state.navbarItem == NavbarItem.genres) {
           return const CategoriesScreen();
         } else if (state.navbarItem == NavbarItem.profile) {
-          return const SizedBox.shrink();
+          return const ProfileScreen();
         }
         return Container();
       },

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -6,6 +7,7 @@ import '../../../common/constants/icon_paths.dart';
 import '../../../common/constants/news_categories.dart';
 import '../../../common/constants/size_constants.dart';
 import '../../../common/extensions/size_extensions.dart';
+import '../../../common/generated/locale_keys.g.dart';
 import '../../../common/screenutil/screenutil.dart';
 import '../../blocs/category_tabbed/category_tabbed_cubit.dart';
 import 'category_articles/category_articles_screen.dart';
@@ -24,8 +26,6 @@ class CategoriesScreen extends StatefulWidget {
 
 class _CategoriesScreenState extends State<CategoriesScreen>
     with SingleTickerProviderStateMixin {
-  final String title = 'Kategoriler';
-
   CategoryTabbedCubit get categoryTabbedCubit =>
       BlocProvider.of<CategoryTabbedCubit>(context);
 
@@ -33,7 +33,7 @@ class _CategoriesScreenState extends State<CategoriesScreen>
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CategoriesAppBar(title: title),
+        CategoriesAppBar(title: LocaleKeys.categories.tr()),
         Expanded(
           child: Padding(
             padding:

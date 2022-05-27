@@ -17,10 +17,10 @@ class ThemeText {
       );
 
   static TextStyle get _blackHeadline6 => _soraTextTheme.headline6!.copyWith(
-    fontSize: Sizes.dimen_14.sp,
-    color: AppColor.black,
-    fontWeight: FontWeight.bold,
-  );
+        fontSize: Sizes.dimen_14.sp,
+        color: AppColor.black,
+        fontWeight: FontWeight.bold,
+      );
 
   static TextStyle get _caption => _soraTextTheme.caption!.copyWith(
         fontSize: Sizes.dimen_10.sp,
@@ -28,9 +28,16 @@ class ThemeText {
         letterSpacing: 0,
       );
 
+  static TextStyle get _semiSubtitle2 => _soraTextTheme.subtitle2!.copyWith(
+        color: AppColor.mineShaft,
+        fontWeight: FontWeight.w600,
+        letterSpacing: 0,
+      );
+
   static getTextTheme() => TextTheme(
         headline6: _blackHeadline6,
         headline5: _whiteHeadline5,
         caption: _caption,
+        subtitle2: _semiSubtitle2,
       );
 }

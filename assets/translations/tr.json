@@ -1,0 +1,15 @@
+{
+    "categories": "Kategori",
+    "tech" : "Teknoloji",
+    "business": "İş",
+    "health" : "Sağlık",
+    "entertainment" : "Eğlence",
+    "general" : "Genel",
+    "science" : "Bilim",
+    "sport" : "Spor",
+    "search" : "Arama",
+    "nightMode" : "Gece modu",
+    "language" : "Dil",
+    "logout" : "Çıkış",
+    "bookmark" : "Kaydedilenler"
+}

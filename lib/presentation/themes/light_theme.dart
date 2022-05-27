@@ -8,7 +8,6 @@ class LightTheme {
 
   LightTheme() {
     theme = ThemeData(
-      primaryColor: AppColor.white,
       scaffoldBackgroundColor: AppColor.white,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: ThemeText.getTextTheme(),
@@ -20,7 +19,10 @@ class LightTheme {
         showUnselectedLabels: false,
         elevation: 0,
       ),
-      
+      colorScheme: ColorScheme.fromSwatch().copyWith(
+        secondary: AppColor.purpleHeart,
+        primary: AppColor.purpleHeart,
+      ),
     );
   }
 }

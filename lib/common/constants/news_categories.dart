@@ -1,3 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
+
+import '../generated/locale_keys.g.dart';
+
 enum NewsCategories {
   business,
   entertainment,
@@ -12,25 +16,25 @@ extension NewsCategoriesExtension on NewsCategories {
   String title() {
     switch (this) {
       case NewsCategories.business:
-        return 'İş';
+        return LocaleKeys.business.tr();
 
       case NewsCategories.entertainment:
-        return 'Eğlence';
+        return LocaleKeys.entertainment.tr();
 
       case NewsCategories.general:
-        return 'Genel';
+        return LocaleKeys.general.tr();
 
       case NewsCategories.health:
-        return 'Sağlık';
+        return LocaleKeys.health.tr();
 
       case NewsCategories.science:
-        return 'Bilim';
+        return LocaleKeys.science.tr();
 
       case NewsCategories.sports:
-        return 'Spor';
+        return LocaleKeys.sport.tr();
 
       case NewsCategories.technology:
-        return 'Teknoloji';
+        return LocaleKeys.tech.tr();
     }
   }
 
