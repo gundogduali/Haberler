@@ -24,7 +24,7 @@ class ThemeText {
 
   static TextStyle get _caption => _soraTextTheme.caption!.copyWith(
         fontSize: Sizes.dimen_10.sp,
-        color: AppColor.white.withOpacity(0.71),
+        color: AppColor.mineShaft,
         letterSpacing: 0,
       );
 
@@ -33,17 +33,18 @@ class ThemeText {
         fontWeight: FontWeight.w600,
         letterSpacing: 0,
       );
-  static TextStyle get whiteButton => _soraTextTheme.subtitle2!.copyWith(
+  static TextStyle get _whiteButton => _soraTextTheme.subtitle2!.copyWith(
         color: AppColor.white,
         fontWeight: FontWeight.bold,
         letterSpacing: 0.5,
       );
+
 
   static getTextTheme() => TextTheme(
         headline6: _blackHeadline6,
         headline5: _whiteHeadline5,
         caption: _caption,
         subtitle2: _semiSubtitle2,
-        button: whiteButton,
+        button: _whiteButton,
       );
 }
