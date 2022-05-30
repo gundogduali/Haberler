@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '../../../common/extensions/size_extensions.dart';
-import '../../../domain/entities/article_entity.dart';
-import '../../widgets/article_card.dart';
+part of 'home_screen.dart';
 
 class NewsListView extends StatefulWidget {
   const NewsListView({Key? key, required this.news}) : super(key: key);

@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '../../../common/extensions/size_extensions.dart';
-import '../../../common/extensions/string_extensions.dart';
-import '../../../domain/entities/article_entity.dart';
+part of 'home_screen.dart';
 
 class ArticleContainerWidget extends StatelessWidget {
   const ArticleContainerWidget({Key? key, required this.article})

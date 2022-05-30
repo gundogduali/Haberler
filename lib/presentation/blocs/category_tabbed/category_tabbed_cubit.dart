@@ -20,7 +20,7 @@ class CategoryTabbedCubit extends Cubit<CategoryTabbedState> {
     final Either<AppError, List<ArticleEntity>?> newsEither =
         await getArticlesbyCategory(CategoryParams(category.name));
 
-    emit(newsEither.fold((l) => CategoryTabLoadError(),
+    emit(newsEither.fold((l) => CategoryTabLoadError(l.appErrorType, category),
         (articles) => CategoryTabLoad(articles: articles ?? [])));
   }
 }

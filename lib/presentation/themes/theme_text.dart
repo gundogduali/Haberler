@@ -33,11 +33,17 @@ class ThemeText {
         fontWeight: FontWeight.w600,
         letterSpacing: 0,
       );
+  static TextStyle get whiteButton => _soraTextTheme.subtitle2!.copyWith(
+        color: AppColor.white,
+        fontWeight: FontWeight.bold,
+        letterSpacing: 0.5,
+      );
 
   static getTextTheme() => TextTheme(
         headline6: _blackHeadline6,
         headline5: _whiteHeadline5,
         caption: _caption,
         subtitle2: _semiSubtitle2,
+        button: whiteButton,
       );
 }

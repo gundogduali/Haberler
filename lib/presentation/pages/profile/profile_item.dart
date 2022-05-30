@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'profile_screen.dart';
 
 class ProfileItem extends StatelessWidget {
   final Icon? icon;

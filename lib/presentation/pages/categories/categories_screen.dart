@@ -33,7 +33,7 @@ class _CategoriesScreenState extends State<CategoriesScreen>
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CategoriesAppBar(title: LocaleKeys.categories.tr()),
+        const CategoriesAppBar(title: LocaleKeys.categories),
         Expanded(
           child: Padding(
             padding:

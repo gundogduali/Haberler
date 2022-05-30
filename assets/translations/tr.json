@@ -1,6 +1,6 @@
 {
     "categories": "Kategori",
-    "tech" : "Teknoloji",
+    "technology" : "Teknoloji",
     "business": "İş",
     "health" : "Sağlık",
     "entertainment" : "Eğlence",
@@ -11,5 +11,9 @@
     "nightMode" : "Gece modu",
     "language" : "Dil",
     "logout" : "Çıkış",
-    "bookmark" : "Kaydedilenler"
+    "bookmark" : "Kaydedilenler",
+    "retry" : "Yeniden dene",
+    "somethingWentWrong": "Bir şeyler yanlış gitti...",
+    "checkNetwork": "Lütfen ağ bağlantınızı kontrol edin ve Yeniden Dene düğmesine basın.",
+    "noArticles": "Üzgünüz, bu bölümün altında makale yok."
 }

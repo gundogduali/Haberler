@@ -1,11 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+import '../../../app_localizations.dart';
 import '../../../common/extensions/size_extensions.dart';
 import '../../../common/generated/locale_keys.g.dart';
 import '../../themes/app_color.dart';
-import 'profile_expanded_item.dart';
-import 'profile_item.dart';
+
+part 'profile_expanded_item.dart';
+part 'profile_item.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);

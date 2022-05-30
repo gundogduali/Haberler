@@ -1,8 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
-
-import '../../../app_localizations.dart';
-import 'profile_item.dart';
+part of 'profile_screen.dart';
 
 class ProfileExpandedItem extends StatelessWidget {
   final Icon? icon;

@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:io';
+
 import 'package:dartz/dartz.dart';
 import 'package:news_app/data/data_sources/news_remote_data_source.dart';
 import 'package:news_app/data/models/article_model.dart';
@@ -18,18 +20,23 @@ class NewsRepository extends INewsRepository {
     try {
       final news = await remoteDataSource.getTopHeadlines();
       return Right(news);
+    } on SocketException {
+      return const Left(AppError(AppErrorType.network));
     } on Exception {
-      return const Left(AppError("Something went wrong."));
+      return const Left(AppError(AppErrorType.api));
     }
   }
 
   @override
-  Future<Either<AppError, List<ArticleEntity>?>> getArticlesbyCategory(String category) async {
+  Future<Either<AppError, List<ArticleEntity>?>> getArticlesbyCategory(
+      String category) async {
     try {
       final news = await remoteDataSource.getByCategory(category);
       return Right(news);
+    } on SocketException {
+      return const Left(AppError(AppErrorType.network));
     } on Exception {
-      return const Left(AppError("Something went wrong."));
+      return const Left(AppError(AppErrorType.api));
     }
   }
 }

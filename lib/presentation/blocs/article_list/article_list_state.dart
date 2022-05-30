@@ -9,7 +9,11 @@ abstract class ArticleListState extends Equatable {
 
 class ArticleListInitial extends ArticleListState {}
 
-class ArticleListError extends ArticleListState {}
+class ArticleListError extends ArticleListState {
+  final AppErrorType errorType;
+
+  const ArticleListError(this.errorType);
+}
 
 class ArticleListLoaded extends ArticleListState {
   final List<ArticleEntity> articles;

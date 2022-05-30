@@ -1,43 +1,14 @@
-import 'package:easy_localization/easy_localization.dart';
-
-import '../generated/locale_keys.g.dart';
-
 enum NewsCategories {
   business,
   entertainment,
   general,
   health,
   science,
-  sports,
+  sport,
   technology
 }
 
 extension NewsCategoriesExtension on NewsCategories {
-  String title() {
-    switch (this) {
-      case NewsCategories.business:
-        return LocaleKeys.business.tr();
-
-      case NewsCategories.entertainment:
-        return LocaleKeys.entertainment.tr();
-
-      case NewsCategories.general:
-        return LocaleKeys.general.tr();
-
-      case NewsCategories.health:
-        return LocaleKeys.health.tr();
-
-      case NewsCategories.science:
-        return LocaleKeys.science.tr();
-
-      case NewsCategories.sports:
-        return LocaleKeys.sport.tr();
-
-      case NewsCategories.technology:
-        return LocaleKeys.tech.tr();
-    }
-  }
-
   String path() {
     switch (this) {
       case NewsCategories.business:
@@ -55,7 +26,7 @@ extension NewsCategoriesExtension on NewsCategories {
       case NewsCategories.science:
         return 'assets/pngs/bg_science.png';
 
-      case NewsCategories.sports:
+      case NewsCategories.sport:
         return 'assets/pngs/bg_sports.png';
 
       case NewsCategories.technology:

@@ -25,7 +25,7 @@ class CategoryContainerWidget extends StatelessWidget {
             )),
         child: Center(
           child: Text(
-            tab.title,
+            tab.title.tr(),
             style: Theme.of(context).textTheme.headline5,
           ),
         ),

@@ -16,7 +16,7 @@ class CategoriesAppBar extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            title,
+            title.tr(),
             style: Theme.of(context).textTheme.headline6!.copyWith(
                   fontSize: Sizes.dimen_22.sp,
                 ),
