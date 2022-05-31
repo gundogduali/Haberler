@@ -1,14 +1,16 @@
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart';
-import 'package:news_app/domain/usecases/get_articles_by_category.dart';
-import 'package:news_app/presentation/blocs/category_tabbed/category_tabbed_cubit.dart';
 
 import '../data/core/api_client.dart';
 import '../data/data_sources/news_remote_data_source.dart';
 import '../data/repositories/news_repository_impl.dart';
 import '../domain/repositories/news_repository.dart';
+import '../domain/usecases/get_articles_by_category.dart';
+import '../domain/usecases/get_searched_articles.dart';
 import '../domain/usecases/get_top_headlines.dart';
 import '../presentation/blocs/article_list/article_list_cubit.dart';
+import '../presentation/blocs/category_tabbed/category_tabbed_cubit.dart';
+import '../presentation/blocs/search_article/search_article_cubit.dart';
 
 final getItInstance = GetIt.I;
 
@@ -33,6 +35,8 @@ Future<void> init() async {
   sl.registerLazySingleton<GetTopHeadlines>(() => GetTopHeadlines(sl()));
   sl.registerLazySingleton<GetArticlesbyCategory>(
       () => GetArticlesbyCategory(sl()));
+  sl.registerLazySingleton<GetSearchedArticles>(
+      () => GetSearchedArticles(sl()));
 
   //* Blocs
   sl.registerFactory<ArticleListCubit>(
@@ -40,4 +44,7 @@ Future<void> init() async {
 
   sl.registerFactory<CategoryTabbedCubit>(
       () => CategoryTabbedCubit(getArticlesbyCategory: sl()));
+
+  sl.registerFactory<SearchArticleCubit>(
+      () => SearchArticleCubit(searchedArticles: sl()));
 }

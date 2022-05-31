@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/presentation/blocs/search_article/search_article_cubit.dart';
 
 import '../common/screenutil/screenutil.dart';
 import '../di/get_it.dart';
@@ -16,6 +17,8 @@ class NewsApp extends StatelessWidget {
   final CategoryTabbedCubit _categoryTabbedCubit =
       getItInstance<CategoryTabbedCubit>();
   final ArticleListCubit _articleListCubit = getItInstance<ArticleListCubit>();
+  final SearchArticleCubit _searchArticleCubit =
+      getItInstance<SearchArticleCubit>();
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +33,9 @@ class NewsApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => _articleListCubit,
+        ),
+        BlocProvider(
+          create: (context) => _searchArticleCubit,
         ),
       ],
       child: MaterialApp(

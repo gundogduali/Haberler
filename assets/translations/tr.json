@@ -15,5 +15,6 @@
     "retry" : "Yeniden dene",
     "somethingWentWrong": "Bir şeyler yanlış gitti...",
     "checkNetwork": "Lütfen ağ bağlantınızı kontrol edin ve Yeniden Dene düğmesine basın.",
-    "noArticles": "Üzgünüz, bu bölümün altında makale yok."
+    "noArticles": "Üzgünüz, bu bölümün altında makale yok.",
+    "noArticlesSearched" : "Makale bulunamadı, lütfen başka bir kelime ile arayın"
 }

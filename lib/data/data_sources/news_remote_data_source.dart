@@ -6,6 +6,7 @@ import '../models/news_result_model.dart';
 abstract class INewsRemoteDataSource {
   Future<List<ArticleModel>?> getTopHeadlines();
   Future<List<ArticleModel>?> getByCategory(String category);
+  Future<List<ArticleModel>?> getSearchedArticles(String searchTerm);
 }
 
 class NewsRemoteDataSource extends INewsRemoteDataSource {
@@ -27,7 +28,20 @@ class NewsRemoteDataSource extends INewsRemoteDataSource {
       category: category,
     ));
     final articles = NewsResultModel.fromJson(response).articles;
-    
+
+    return articles;
+  }
+
+  @override
+  Future<List<ArticleModel>?> getSearchedArticles(String searchTerm) async {
+    final response = await _client.get(
+      ApiPaths.getTopHeadlines.str(),
+      params: {
+        'q': searchTerm,
+      },
+    );
+    final articles = NewsResultModel.fromJson(response).articles;
+
     return articles;
   }
 }

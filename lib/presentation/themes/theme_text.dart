@@ -18,7 +18,7 @@ class ThemeText {
 
   static TextStyle get _blackHeadline6 => _soraTextTheme.headline6!.copyWith(
         fontSize: Sizes.dimen_14.sp,
-        color: AppColor.black,
+        color: AppColor.white,
         fontWeight: FontWeight.bold,
       );
 
@@ -39,6 +39,11 @@ class ThemeText {
         letterSpacing: 0.5,
       );
 
+  static TextStyle get _whiteBody1 => _soraTextTheme.bodyText1!.copyWith(
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
+        color: AppColor.white,
+      );
 
   static getTextTheme() => TextTheme(
         headline6: _blackHeadline6,
@@ -46,5 +51,6 @@ class ThemeText {
         caption: _caption,
         subtitle2: _semiSubtitle2,
         button: _whiteButton,
+        bodyText1: _whiteBody1,
       );
 }

@@ -14,6 +14,7 @@ class LightTheme {
       appBarTheme: const AppBarTheme(
         elevation: 0,
       ),
+    
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         showSelectedLabels: false,
         showUnselectedLabels: false,
@@ -23,6 +24,7 @@ class LightTheme {
         secondary: AppColor.purpleHeart,
         primary: AppColor.purpleHeart,
       ),
+      
     );
   }
 }

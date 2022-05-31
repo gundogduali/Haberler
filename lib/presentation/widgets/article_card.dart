@@ -53,7 +53,10 @@ class ArticleCard extends StatelessWidget {
                       article.title,
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline6!
+                          .copyWith(color: AppColor.black),
                     ),
                     SizedBox(
                       height: 4.h,

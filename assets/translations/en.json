@@ -15,5 +15,6 @@
     "retry" : "Retry",
     "somethingWentWrong": "Something went wrong...",
     "checkNetwork": "Please check your network connection and press Retry button or put in as a bug by pressing Feedback button.",
-    "noArticles": "Sorry, no articles under this section"
+    "noArticles": "Sorry, no articles under this section",
+    "noArticlesSearched" : "No articles found, please search with another word"
 }

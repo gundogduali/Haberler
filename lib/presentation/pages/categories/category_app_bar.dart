@@ -19,6 +19,7 @@ class CategoriesAppBar extends StatelessWidget {
             title.tr(),
             style: Theme.of(context).textTheme.headline6!.copyWith(
                   fontSize: Sizes.dimen_22.sp,
+                  color: AppColor.black,
                 ),
           ),
           const Spacer(),

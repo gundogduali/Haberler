@@ -10,6 +10,7 @@ import '../../../common/extensions/size_extensions.dart';
 import '../../../common/generated/locale_keys.g.dart';
 import '../../../common/screenutil/screenutil.dart';
 import '../../blocs/category_tabbed/category_tabbed_cubit.dart';
+import '../../themes/app_color.dart';
 import 'category_articles/category_articles_screen.dart';
 
 part 'category_app_bar.dart';

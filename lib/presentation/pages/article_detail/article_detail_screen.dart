@@ -32,17 +32,19 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
             ArticlePoster(imageUrl: widget.article.urlToImage),
             Padding(
               padding: EdgeInsets.symmetric(
-                  horizontal: Sizes.dimen_16.w, vertical: Sizes.dimen_8.h),
+                  horizontal: Sizes.dimen_16.w, vertical: Sizes.dimen_4.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     widget.article.title,
-                    style: Theme.of(context).textTheme.headline6!.copyWith(
-                          fontSize: 22,
-                        ),
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline6!
+                        .copyWith(fontSize: 22, color: AppColor.mineShaft),
                     maxLines: 2,
                   ),
+                  SizedBox(height: 2.h),
                   Text(
                     widget.article.publishedAt == null
                         ? DateTime.now().toString()
